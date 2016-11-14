@@ -37,7 +37,7 @@ int main()
 // open working file "batch_payment.txt" and extract ID1 and ID2
     cout<<"The past transactions are between: "<<'\n';
     ifstream  workfile;
-    workfile.open("batch_payment.txt") ;
+    workfile.open("paymo_input/batch_payment.txt") ;
     if (workfile.fail()) {
         cerr<<"are you sure you did it right?"<<endl;
     }
@@ -138,11 +138,11 @@ int main()
     
 //open the stream.txt and extract ID1 and ID2: if x[id1][id2]=0 -> there was a transaction before and we write this into resultfile 1.
     ifstream  taskfile;
-    taskfile.open("stream_payment.txt");
+    taskfile.open("paymo_input/stream_payment.txt");
     ofstream allowed1, allowed2, allowed3;
-    allowed1.open("output1.txt");
-    allowed2.open("output2.txt");
-    allowed3.open("output3.txt");
+    allowed1.open("paymo_output/output1.txt");
+    allowed2.open("paymo_output/output2.txt");
+    allowed3.open("paymo_output/output3.txt");
     
     if (taskfile.fail())
       {
